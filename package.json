@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "FIC journals layout parser using xmldom library",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +24,6 @@
   },
   "homepage": "https://github.com/antonklyukin/fic-layout-parser-xmldom#readme",
   "dependencies": {
-    "xmldom": "^0.6.0"
+    "@xmldom/xmldom": "^0.8.7"
   }
 }
