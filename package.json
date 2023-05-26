@@ -1,0 +1,28 @@
+{
+  "name": "fic-layout-parser-xmldom",
+  "version": "1.0.0",
+  "description": "FIC journals layout parser using xmldom library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonklyukin/fic-layout-parser-xmldom.git"
+  },
+  "keywords": [
+    "fic",
+    "parser",
+    "layout",
+    "xmldom"
+  ],
+  "author": "Anton Klyukin <antonklyukin@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonklyukin/fic-layout-parser-xmldom/issues"
+  },
+  "homepage": "https://github.com/antonklyukin/fic-layout-parser-xmldom#readme",
+  "dependencies": {
+    "xmldom": "^0.6.0"
+  }
+}
