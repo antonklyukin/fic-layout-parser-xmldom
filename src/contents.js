@@ -119,7 +119,7 @@ const getRowCellsContentArray = (rowElement) => {
  */
 const getAuthorsAndArticleName = (text) => {
   const regexp =
-    /(^[а-яА-ЯёЁa-zA-Z\s\.\,]+(?=[а-яА-ЯёЁa-zA-Z]\.)[а-яА-ЯёЁa-zA-Z\.]+)\s+(.+)/;
+    /(^[а-яА-ЯёЁa-zA-Z\s.,]+(?=[а-яА-ЯёЁa-zA-Z].)[а-яА-ЯёЁa-zA-Z.]+)\s+(.+)/;
   const matchedValues = text.match(regexp);
   const articlesAndAuthorsArr = [matchedValues[1], matchedValues[2]];
 
