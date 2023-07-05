@@ -15,7 +15,7 @@ const getDomData = (layoutInfoObj) => {
   return { contentDomData, stylesDomData };
 };
 
-const layoutTextData = getLayoutInfoObjMock('fc-2023-01'); // Gets Layout Info from odt (Stub)
+const layoutTextData = getLayoutInfoObjMock('fc-2018-06'); // Gets Layout Info from odt (Stub)
 const layoutDomData = getDomData(layoutTextData);
 
 const doc = layoutDomData.contentDomData;
@@ -29,7 +29,7 @@ const doc = layoutDomData.contentDomData;
  * @param {String} text Text in tag
  * @returns {Element} Found element
  */
-const getContentsHeaderElement = (doc, tagName, text) => {
+const getElementByTextContent = (doc, tagName, text) => {
   const textElements = doc.getElementsByTagName(tagName);
   for (let i = 0; i < textElements.length; i += 1) {
     const elementText = clearString(textElements[i].textContent);
@@ -48,10 +48,26 @@ const getContentsHeaderElement = (doc, tagName, text) => {
  * @returns {Element} Found table element
  */
 const getContentsTableElement = (doc) => {
-  let headerEl = getContentsHeaderElement(doc, 'text:h', 'СОДЕРЖАНИЕ');
-  while ((headerEl = headerEl.nextSibling)) {
-    if (headerEl.nodeName === 'table:table') {
-      return headerEl;
+  let headerEl = {};
+  //Флаг, сигнализирующий, что выпуск журнала 2018 года
+  let year2018 = false;
+  headerEl = getElementByTextContent(doc, 'text:h', 'СОДЕРЖАНИЕ');
+  if (headerEl === 0) {
+    year2018 = true;
+  }
+  if (year2018) {
+    headerEl = getElementByTextContent(doc, 'text:h', 'СОДЕРЖАНИЕ НОМЕРА');
+
+    while ((headerEl = headerEl.nextSibling)) {
+      if (headerEl.nodeName === 'table:table') {
+        return headerEl;
+      }
+    }
+  } else {
+    while ((headerEl = headerEl.nextSibling)) {
+      if (headerEl.nodeName === 'table:table') {
+        return headerEl;
+      }
     }
   }
 };
@@ -119,7 +135,7 @@ const getRowCellsContentArray = (rowElement) => {
  */
 const getAuthorsAndArticleName = (text) => {
   const regexp =
-    /(^[а-яА-ЯёЁa-zA-Z\s.,]+(?=[а-яА-ЯёЁa-zA-Z].)[а-яА-ЯёЁa-zA-Z.]+)\s+(.+)/;
+    /(^[а-яА-ЯёЁa-zA-Z\s\.\,]+(?=[а-яА-ЯёЁa-zA-Z]\.)[а-яА-ЯёЁa-zA-Z\.]+)\s+(.+)/;
   const matchedValues = text.match(regexp);
   const articlesAndAuthorsArr = [matchedValues[1], matchedValues[2]];
 
