@@ -1,5 +1,9 @@
 'use strict';
 
+import { DOMParser } from '@xmldom/xmldom';
+
+import { getLayoutInfoObjMock } from './stubs.js';
+
 /**
  * Clear text string from tabs, multiple spaces, trailing spaces.
  * @name clearString
@@ -14,4 +18,56 @@ const clearString = (str) => {
   return strTrimmed;
 };
 
-export { clearString };
+/**
+ * Функция возвращает текстовое содержимое из узла
+ * @function
+ * @param {Element} el
+ * @param {String} text
+ */
+const getTextContentFromNode = (el, text = '') => {
+  const nodeList = el.childNodes;
+  let nodeText = text;
+
+  for (let i = 0; i < nodeList.length; i++) {
+    let currentNode = nodeList[i];
+
+    if (currentNode.nodeType === 3) {
+      nodeText += currentNode.textContent;
+    }
+    if (currentNode.nodeType === 1) {
+      if (currentNode.nodeName === 'text:line-break') {
+        nodeText += ' ';
+      } else {
+        nodeText = getTextContentFromNode(currentNode, nodeText);
+      }
+    }
+  }
+  return nodeText;
+};
+
+/**
+ * Возвращает DOM Document из выбранной тестовой верстки
+ * @function
+ * @param {String} layoutName Название файла верстки из директории test_layouts
+ * @returns {Document}
+ */
+const getMockDocument = (layoutName) => {
+  const getDomData = (layoutInfoObj) => {
+    const contentDomData = new DOMParser().parseFromString(
+      layoutInfoObj.contentDataText,
+      'text/xml'
+    );
+    const stylesDomData = new DOMParser().parseFromString(
+      layoutInfoObj.stylesDataText,
+      'text/xml'
+    );
+    return { contentDomData, stylesDomData };
+  };
+
+  const layoutTextData = getLayoutInfoObjMock(layoutName); // Gets Layout Info from odt (Stub)
+  const layoutDomData = getDomData(layoutTextData);
+
+  return layoutDomData.contentDomData;
+};
+
+export { clearString, getMockDocument, getTextContentFromNode };
