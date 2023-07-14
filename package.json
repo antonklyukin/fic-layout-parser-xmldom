@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "FIC journals layout parser using xmldom library",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "jest"
   },
@@ -24,7 +23,8 @@
   },
   "homepage": "https://github.com/antonklyukin/fic-layout-parser-xmldom#readme",
   "dependencies": {
-    "@xmldom/xmldom": "^0.8.7"
+    "@xmldom/xmldom": "^0.8.7",
+    "eslint-plugin-jest": "^27.2.3"
   },
   "devDependencies": {
     "eslint": "^8.42.0",

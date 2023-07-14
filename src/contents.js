@@ -1,7 +1,7 @@
-import { getLayoutInfoObjMock } from './stubs.js';
-import { clearString } from './utils.js';
+const getLayoutInfoObjMock = require('./stubs.js');
+const clearString = require('./utils.js');
 
-import { DOMParser } from '@xmldom/xmldom';
+const { DOMParser } = require('@xmldom/xmldom');
 
 const getDomData = (layoutInfoObj) => {
   const contentDomData = new DOMParser().parseFromString(
@@ -200,5 +200,3 @@ const getArticlesArray = (doc) => {
   }
   return articlesArray;
 };
-
-console.log(getArticlesArray(doc));

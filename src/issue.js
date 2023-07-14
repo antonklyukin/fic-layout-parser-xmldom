@@ -1,6 +1,6 @@
 'use strict';
 
-import * as utils from './utils.js';
+const utils = require('./utils.js');
 
 const journalISSN = {
   '2071-4688': 'Финансы и кредит',
@@ -42,7 +42,7 @@ const getJournalName = (document) => {
 };
 
 /**
- * Функция возвращает объект с найденными номером томоа, номером выпуска и годом выпуска
+ * Функция возвращает объект с найденными номером тома, номером выпуска и годом выпуска
  * @function
  * @param {Document} document
  * @returns
@@ -65,4 +65,4 @@ const getPublicationData = (document) => {
   return pubData;
 };
 
-export { getJournalName, getPublicationData };
+module.exports = { getJournalName, getPublicationData };

@@ -1,8 +1,8 @@
 'use strict';
 
-import { DOMParser } from '@xmldom/xmldom';
+const { DOMParser } = require('@xmldom/xmldom');
 
-import { getLayoutInfoObjMock } from './stubs.js';
+const { getLayoutInfoObjMock } = require('./stubs.js');
 
 /**
  * Clear text string from tabs, multiple spaces, trailing spaces.
@@ -70,4 +70,4 @@ const getMockDocument = (layoutName) => {
   return layoutDomData.contentDomData;
 };
 
-export { clearString, getMockDocument, getTextContentFromNode };
+module.exports = { clearString, getMockDocument, getTextContentFromNode };

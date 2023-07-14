@@ -1,6 +1,6 @@
 'use strict';
 
-import * as fs from 'fs';
+const fs = require('fs');
 
 /**
  * Stub function to create LayoutInfo object. Returns object with layout data files.
@@ -20,4 +20,4 @@ const getLayoutInfoObjMock = (prefix) => {
   return { contentDataText, stylesDataText };
 };
 
-export { getLayoutInfoObjMock };
+module.exports = { getLayoutInfoObjMock };
