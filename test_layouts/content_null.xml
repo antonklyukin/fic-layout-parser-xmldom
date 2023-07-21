@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table:table table:name="Таблица32" table:style-name="Таблица32">
+    <table:table-column table:style-name="Таблица32.A"/>
+    <table:table-column table:style-name="Таблица32.B"/>
+    <table:table-row>
+        <table:table-cell table:style-name="Таблица32.A1" table:number-columns-spanned="2" office:value-type="string">
+            <text:p text:style-name="P194">
+                <text:span text:style-name="T181">a</text:span>
+                <text:span text:style-name="T245"> кандидат экономических наук, старший научный сотрудник,                    <text:line-break/>
+Институт экономики Уральского отделения Российской академии наук</text:span>,                <text:line-break/>
+                <text:span text:style-name="T643">Екатеринбург, </text:span>Российская Федерация                <text:line-break/>
+vay_uiec@mail.ru<text:span text:style-name="T210">
+                <text:line-break/>
+            </text:span>
+            <text:span text:style-name="T213">https://</text:span>
+            <text:span text:style-name="T210">orcid.org/0000-0003-1808-7856<text:line-break/>
+SPIN-код: 7251-7371</text:span>
+        </text:p>
+        <text:p text:style-name="P227">
+            <text:span text:style-name="T181">b</text:span>
+            <text:span text:style-name="T245"></text:span>
+            <text:span text:style-name="T248">исследователь</text:span>
+            <text:span text:style-name="T644">,                <text:line-break/>
+            </text:span>
+            <text:span text:style-name="T245">Институт экономики Уральского отделения Российской академии наук</text:span>
+            <text:span text:style-name="T644">,                <text:line-break/>
+Екатеринбург</text:span>, Российская Федерация            <text:line-break/>
+dasha.sele@gmail.com<text:line-break/>
+        <text:span text:style-name="T645">https://</text:span>orcid.org/0000-0001-9542-3740<text:line-break/>
+SPIN-код:<text:span text:style-name="T439"> 5309-5820</text:span>
+</text:p>
+<text:p text:style-name="P226">
+    <text:span text:style-name="T183">•</text:span>
+    <text:span text:style-name="T246"></text:span>Ответственный автор 
+</text:p>
+</table:table-cell>
+<table:covered-table-cell/>
+</table:table-row>
+<table:table-row>
+<table:table-cell table:style-name="Таблица32.A2" office:value-type="string">
+<text:p text:style-name="P240">История статьи:    <text:span text:style-name="T277"></text:span>
+</text:p>
+<text:p text:style-name="P192">Рег. №    <text:span text:style-name="T287">129</text:span>/202<text:span text:style-name="T440">3</text:span>
+</text:p>
+<text:p text:style-name="P3">Получена    <text:span text:style-name="T140">10</text:span>.    <text:span text:style-name="T161">04</text:span>.202<text:span text:style-name="T440">3</text:span>
+</text:p>
+<text:p text:style-name="P3">Получена в доработанном виде    <text:span text:style-name="T140">18</text:span>.    <text:span text:style-name="T161">04</text:span>.202<text:span text:style-name="T440">3</text:span>
+</text:p>
+<text:p text:style-name="P3">Одобрена    <text:span text:style-name="T140">30</text:span>.    <text:span text:style-name="T161">04</text:span>.202<text:span text:style-name="T440">3</text:span>
+</text:p>
+<text:p text:style-name="P3">Доступна онлайн </text:p>
+<text:p text:style-name="P228">
+    <text:span text:style-name="T139">30</text:span>.    <text:span text:style-name="T441">05</text:span>.202<text:span text:style-name="T441">3 </text:span>
+</text:p>
+<text:p text:style-name="P3"/>
+<text:p text:style-name="P3">
+    <text:span text:style-name="T165">УДК</text:span>
+    <text:span text:style-name="T140">334.7</text:span>
+</text:p>
+<text:p text:style-name="P3">
+    <text:span text:style-name="T165">JEL:</text:span> C51, D12, E27, L14, O57 </text:p>
+<text:p text:style-name="P3"/>
+<text:p text:style-name="P553">
+    <text:span text:style-name="T165">Специальность</text:span> 5.2.</text:p>
+<text:p text:style-name="P553"/>
+<text:p text:style-name="P553"/>
+<text:p text:style-name="P3"/>
+<text:p text:style-name="P3"/>
+<text:p text:style-name="P3"/>
+<text:p text:style-name="P3">
+    <text:span text:style-name="T165">Ключевые слова:</text:span>
+    <text:span text:style-name="T277"></text:span>шеринг-экономика, институциональные факторы,    <text:line-break/>
+регулирование, неформальные и формальные    <text:line-break/>
+институты </text:p>
+</table:table-cell>
+<table:table-cell table:style-name="Таблица32.A2" office:value-type="string">
+<text:p text:style-name="P237">Аннотация</text:p>
+<text:p text:style-name="P195">
+    <text:span text:style-name="T1028">Предмет.</text:span>
+    <text:span text:style-name="T1024"> Рассматриваются институциональные аспекты развития шеринг-экономики как новой бизнес-модели, получившей свое</text:span> распространение в условиях ускорения социально-экономическим    <text:span text:style-name="T1001">х</text:span>
+    <text:span text:style-name="T688">процессов ввиду внедрения цифровых технологий, а также</text:span> трансформации моделей поведения экономических агентов, которые вызваны как технологическими, так и ценностными изменениями. 
+</text:p>
+<text:p text:style-name="P195">
+    <text:span text:style-name="T1071">Цели.</text:span>
+    <text:span text:style-name="T1069"> Определение влияния факторов, характеризующих</text:span>
+    <text:span text:style-name="T1050">институциональную среду развитых и развивающихся стран, на</text:span> формирование шеринг-экономики. 
+</text:p>
+<text:p text:style-name="P195">
+    <text:span text:style-name="T165">Методология.</text:span> Методологическую основу составляют общенаучные и специальные методы исследования, включающие статистические методы,    <text:span text:style-name="T688">метод группировки, регрессионный анализ с учетом проверки</text:span> соответствующих тестов и др. 
+</text:p>
+<text:p text:style-name="P195">
+    <text:span text:style-name="T165">Результаты.</text:span> В исследовании было проанализировано влияние факторов,    <text:span text:style-name="T1044">характеризующих формальные, в том числе, регулятивные и</text:span> поддерживающие, а также неформальных институтов, на развитие    <text:span text:style-name="T703">шеринг-экономики. Было обосновано положительное влияние</text:span> регулятивных факторов (политическая стабильность, право голоса и подотчетности) на развитие шеринг-экономики. Показано, что шеринг-экономика эффективнее развивается в условиях свободы (свободы ведения бизнеса, свободы инвестирования). Выявлено, что повышение налогового бремени имеет положительн    <text:span text:style-name="T1001">ое</text:span>
+    <text:span text:style-name="T1001">влияние</text:span> на развитие рассматриваемой бизнес-модели лишь в наименее развитых странах. В части анализа неформальных институтов подтвержден негативный эффект высокого уровня дистанции власти на развитие шеринг-экономики. Показано, что стремление к стабильности, выражающееся в высоком уровне долгосрочной ориентации в обществе, также негативно    <text:soft-page-break/>
+сказывается на развитии шеринг-экономики. Вместе с тем обосновано позитивное влияние факторов социального развития, связанных с развитием человеческого капитала. </text:p>
+<text:p text:style-name="P195">
+    <text:span text:style-name="T165">Выводы.</text:span> Значимость полученных результатов состоит в выявлении факторов, которые оказывают наибол    <text:span text:style-name="T1001">ьш</text:span>ее    <text:span text:style-name="T1001">влия</text:span>ние на развитие шеринг-экономики в различных странах с учетом их уровня социально-    <text:span text:style-name="T1024">экономического развития. Практическая значимость проведенного исследования состоит в обосновании значимости инклюзивной</text:span> институциональной среды для развития шеринг-экономики.
+</text:p>
+<text:p text:style-name="P195"/>
+<text:p text:style-name="P196">© Издательский дом ФИНАНСЫ и КРЕДИТ, 20<text:span text:style-name="T138">23</text:span>
+</text:p>
+<text:p text:style-name="P196"/>
+</table:table-cell>
+</table:table-row>
+<table:table-row>
+<table:table-cell table:style-name="Таблица32.A3" table:number-columns-spanned="2" office:value-type="string">
+<text:p text:style-name="P397">
+    <text:span text:style-name="T805">Для цитирования:</text:span>
+    <text:span text:style-name="T798"></text:span>Веретенникова А.Ю., Селезнева Д.А.    <text:span text:style-name="T799">Институциональные факторы формирования шеринг-экономики в развитых и развивающихся странах</text:span>
+    <text:span text:style-name="T798"> // Экономический анализ: теория и практика</text:span>
+    <text:span text:style-name="T800">.</text:span>
+    <text:span text:style-name="T798"> – 20</text:span>
+    <text:span text:style-name="T801">23</text:span>
+    <text:span text:style-name="T798">. – Т. </text:span>
+    <text:span text:style-name="T802">22</text:span>
+    <text:span text:style-name="T798">, № </text:span>
+    <text:span text:style-name="T803">5</text:span>
+    <text:span text:style-name="T798">. – С. </text:span>
+    <text:span text:style-name="T804">846</text:span>
+    <text:span text:style-name="T798"> – </text:span>
+    <text:span text:style-name="T804">871</text:span>
+    <text:span text:style-name="T798">.</text:span>
+</text:p>
+<text:p text:style-name="СтатьяАннотацияРус">
+    <text:a xlink:type="simple" xlink:href="https://doi.org/10.24891/ea.22.5.846" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link">
+        <text:span text:style-name="Internet_20_link">
+            <text:span text:style-name="T115">https://doi.org/10.24891/ea.22.5.846</text:span>
+        </text:span>
+    </text:a>
+</text:p>
+<text:p text:style-name="P350"/>
+</table:table-cell>
+<table:covered-table-cell/>
+</table:table-row>
+</table:table>

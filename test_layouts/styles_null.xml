@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<text:list-style style:name="СтатьяНумСписокСкобкаУровень2">
+    <text:list-level-style-number text:level="1" loext:num-list-format="%1%)" style:num-suffix=")" style:num-format="1">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+            <style:list-level-label-alignment text:label-followed-by="space" fo:text-indent="-0.501cm" fo:margin-left="0.85cm"/>
+        </style:list-level-properties>
+    </text:list-level-style-number>
+    <text:list-level-style-number text:level="2" loext:num-list-format="%2%)" style:num-suffix=")" style:num-format="1">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+            <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.905cm" fo:text-indent="-0.635cm" fo:margin-left="1.905cm"/>
+        </style:list-level-properties>
+    </text:list-level-style-number>
+    <text:list-level-style-number text:level="3" loext:num-list-format="%3%)" style:num-suffix=")" style:num-format="1">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+            <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
+        </style:list-level-properties>
+    </text:list-level-style-number>
+    <text:list-level-style-number text:level="4" loext:num-list-format="%4%)" style:num-suffix=")" style:num-format="1">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+            <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
+        </style:list-level-properties>
+    </text:list-level-style-number>
+    <text:list-level-style-number text:level="5" loext:num-list-format="%5%)" style:num-suffix=")" style:num-format="1">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+            <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
+        </style:list-level-properties>
+    </text:list-level-style-number>
+    <text:list-level-style-number text:level="6" loext:num-list-format="%6%)" style:num-suffix=")" style:num-format="1">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+            <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
+        </style:list-level-properties>
+    </text:list-level-style-number>
+    <text:list-level-style-number text:level="7" loext:num-list-format="%7%)" style:num-suffix=")" style:num-format="1">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+            <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
+        </style:list-level-properties>
+    </text:list-level-style-number>
+    <text:list-level-style-number text:level="8" loext:num-list-format="%8%)" style:num-suffix=")" style:num-format="1">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+            <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
+        </style:list-level-properties>
+    </text:list-level-style-number>
+    <text:list-level-style-number text:level="9" loext:num-list-format="%9%)" style:num-suffix=")" style:num-format="1">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+            <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
+        </style:list-level-properties>
+    </text:list-level-style-number>
+    <text:list-level-style-number text:level="10" loext:num-list-format="%10%)" style:num-suffix=")" style:num-format="1">
+        <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+            <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
+        </style:list-level-properties>
+    </text:list-level-style-number>
+</text:list-style>
