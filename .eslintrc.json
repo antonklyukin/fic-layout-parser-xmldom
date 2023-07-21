@@ -4,8 +4,15 @@
     "node": true
   },
   "plugins": ["prettier", "jest"],
-  "extends": ["prettier", "eslint:recommended", "plugin:jest/all"],
-  "overrides": [],
+  "extends": ["prettier", "eslint:recommended"],
+  "overrides": [
+    {
+      "files": ["test/**"],
+      "plugins": ["jest"],
+      "extends": ["plugin:jest/all"],
+      "rules": { "indent": ["error", 2] }
+    }
+  ],
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module"
