@@ -1,5 +1,5 @@
-const utils = require('../src/utils.js');
-const issue = require('../src/issue.js');
+const utils = require('../lib/utils.js');
+const issue = require('../lib/issue.js');
 
 describe('getJournalName() Testing', () => {
   it('getJournalName(ea-2023-05) Testing', () => {
@@ -76,7 +76,7 @@ describe('getPubDates() Testing', () => {
     expect(issue.getPubDates(document).releaseDate).toBe('26.01.2016');
     expect(issue.getPubDates(document).releaseYear).toBe('2016');
   });
-  /*TODO Поправить ошшибку Expected at least one assertion to be called but received none*/
+  /*TODO Поправить ошшибку Expected at least one assertion to be called but received none`*/
   it('getPubDates(null) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('null');
