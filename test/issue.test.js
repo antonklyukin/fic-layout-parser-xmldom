@@ -97,7 +97,7 @@ describe('getPublicationData() Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('fc-2018-06');
     expect(issue.getPublicationData(document).tome).toBe('24');
-    expect(issue.getPublicationData(document).issue).toBe('21');
+    expect(issue.getPublicationData(document).issue).toBe('6');
     expect(issue.getPublicationData(document).month).toBe('июнь');
     expect(issue.getPublicationData(document).year).toBe('2018');
   });
@@ -132,35 +132,35 @@ describe('getPublicationData() Testing', () => {
   });
 });
 
-describe('getThroughIssueNumber() Testing', () => {
+describe('getThroughIssueNumberOfIssue() Testing', () => {
   it('getThroughIssueNumber(ea-2023-05) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('ea-2023-05');
-    expect(issue.getThroughIssueNumber(document)).toBe('536');
+    expect(issue.getThroughIssueNumberOfIssue(document)).toBe('536');
   });
-  it('getThroughIssueNumber(fc-2018-06) Testing', () => {
+  it('getThroughIssueNumberOfIssue(fc-2018-06) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('fc-2018-06');
-    expect(issue.getThroughIssueNumber(document)).toBe('774');
+    expect(issue.getThroughIssueNumberOfIssue(document)).toBe('774');
   });
-  it('getThroughIssueNumber(fc-2023-01) Testing', () => {
+  it('getThroughIssueNumberOfIssue(fc-2023-01) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('fc-2023-01');
-    expect(issue.getThroughIssueNumber(document)).toBe('829');
+    expect(issue.getThroughIssueNumberOfIssue(document)).toBe('829');
   });
-  it('getThroughIssueNumber(ia-2019-11) Testing', () => {
+  it('getThroughIssueNumberOfIssue(ia-2019-11) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('ia-2019-11');
-    expect(issue.getThroughIssueNumber(document)).toBe('461');
+    expect(issue.getThroughIssueNumberOfIssue(document)).toBe('461');
   });
-  it('getThroughIssueNumber(re-2016-01) Testing', () => {
+  it('getThroughIssueNumberOfIssue(re-2016-01) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('re-2016-01');
-    expect(issue.getThroughIssueNumber(document)).toBeNull();
+    expect(issue.getThroughIssueNumberOfIssue(document)).toBe('424');
   });
-  it('getThroughIssueNumber(null) Testing', () => {
+  it('getThroughIssueNumberOfIssue(null) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('null');
-    expect(issue.getThroughIssueNumber(document)).toBeNull();
+    expect(issue.getThroughIssueNumberOfIssue(document)).toBeNull();
   });
 });
