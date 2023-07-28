@@ -85,6 +85,14 @@ describe('getPubDates() Testing', () => {
 });
 
 describe('getPublicationData() Testing', () => {
+  it('getPublicationData(df-2018-02) Testing', () => {
+    expect.hasAssertions();
+    const document = utils.getMockDocument('df-2018-02');
+    expect(issue.getPublicationData(document).tome).toBe('23');
+    expect(issue.getPublicationData(document).issue).toBe('2');
+    expect(issue.getPublicationData(document).month).toBe('апрель-июнь');
+    expect(issue.getPublicationData(document).year).toBe('2018');
+  });
   it('getPublicationData(ea-2023-05) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('ea-2023-05');
@@ -92,6 +100,14 @@ describe('getPublicationData() Testing', () => {
     expect(issue.getPublicationData(document).issue).toBe('5');
     expect(issue.getPublicationData(document).month).toBe('май');
     expect(issue.getPublicationData(document).year).toBe('2023');
+  });
+  it('getPublicationData(fa-2018-04) Testing', () => {
+    expect.hasAssertions();
+    const document = utils.getMockDocument('fa-2018-04');
+    expect(issue.getPublicationData(document).tome).toBe('11');
+    expect(issue.getPublicationData(document).issue).toBe('4');
+    expect(issue.getPublicationData(document).month).toBe('октябрь-декабрь');
+    expect(issue.getPublicationData(document).year).toBe('2018');
   });
   it('getPublicationData(fc-2018-06) Testing', () => {
     expect.hasAssertions();
