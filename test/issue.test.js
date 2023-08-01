@@ -1,5 +1,6 @@
 const utils = require('../lib/utils.js');
 const issue = require('../lib/issue.js');
+// const { doc } = require('prettier');
 
 describe('getJournalName() Testing', () => {
   it('getJournalName(ea-2023-05) Testing', () => {
@@ -36,7 +37,9 @@ describe('getJournalName() Testing', () => {
   it('getJournalName(null) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('null');
-    expect(issue.getJournalName(document)).toBeNull();
+    expect(() => {
+      issue.getJournalName(document);
+    }).toThrow('Название журнала не найдено!');
   });
 });
 
@@ -80,7 +83,9 @@ describe('getPubDates() Testing', () => {
   it('getPubDates(null) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('null');
-    expect(issue.getPubDates(document)).toBeNull();
+    expect(() => {
+      issue.getPubDates(document);
+    }).toThrow('Данные о датах публикации не найдены!');
   });
 });
 
@@ -88,63 +93,100 @@ describe('getPublicationData() Testing', () => {
   it('getPublicationData(df-2018-02) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('df-2018-02');
-    expect(issue.getPublicationData(document).tome).toBe('23');
-    expect(issue.getPublicationData(document).issue).toBe('2');
-    expect(issue.getPublicationData(document).month).toBe('апрель-июнь');
-    expect(issue.getPublicationData(document).year).toBe('2018');
+    const pubData = issue.getPublicationData(document);
+    expect(pubData).toMatchObject({
+      volume: '23',
+      issue: '2',
+      month: 'апрель-июнь',
+      pubDate: '20.06.2018',
+      releaseDate: '27.06.2018',
+      year: '2018',
+    });
   });
   it('getPublicationData(ea-2023-05) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('ea-2023-05');
-    expect(issue.getPublicationData(document).tome).toBe('22');
-    expect(issue.getPublicationData(document).issue).toBe('5');
-    expect(issue.getPublicationData(document).month).toBe('май');
-    expect(issue.getPublicationData(document).year).toBe('2023');
+    const pubData = issue.getPublicationData(document);
+    expect(pubData).toMatchObject({
+      volume: '22',
+      issue: '5',
+      month: 'май',
+      pubDate: '24.05.2023',
+      releaseDate: '30.05.2023',
+      year: '2023',
+    });
   });
   it('getPublicationData(fa-2018-04) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('fa-2018-04');
-    expect(issue.getPublicationData(document).tome).toBe('11');
-    expect(issue.getPublicationData(document).issue).toBe('4');
-    expect(issue.getPublicationData(document).month).toBe('октябрь-декабрь');
-    expect(issue.getPublicationData(document).year).toBe('2018');
+    const pubData = issue.getPublicationData(document);
+    expect(pubData).toMatchObject({
+      volume: '11',
+      issue: '4',
+      month: 'октябрь-декабрь',
+      pubDate: '23.11.2018',
+      releaseDate: '29.11.2018',
+      year: '2018',
+    });
   });
   it('getPublicationData(fc-2018-06) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('fc-2018-06');
-    expect(issue.getPublicationData(document).tome).toBe('24');
-    expect(issue.getPublicationData(document).issue).toBe('6');
-    expect(issue.getPublicationData(document).month).toBe('июнь');
-    expect(issue.getPublicationData(document).year).toBe('2018');
+    const pubData = issue.getPublicationData(document);
+    expect(pubData).toMatchObject({
+      volume: '24',
+      issue: '6',
+      month: 'июнь',
+      pubDate: '21.06.2018',
+      releaseDate: '27.06.2018',
+      year: '2018',
+    });
   });
   it('getPublicationData(fc-2023-01) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('fc-2023-01');
-    expect(issue.getPublicationData(document).tome).toBe('29');
-    expect(issue.getPublicationData(document).issue).toBe('1');
-    expect(issue.getPublicationData(document).month).toBe('январь');
-    expect(issue.getPublicationData(document).year).toBe('2023');
+    const pubData = issue.getPublicationData(document);
+    expect(pubData).toMatchObject({
+      volume: '29',
+      issue: '1',
+      month: 'январь',
+      pubDate: '24.01.2023',
+      releaseDate: '30.01.2023',
+      year: '2023',
+    });
   });
   it('getPublicationData(ia-2019-11) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('ia-2019-11');
-    expect(issue.getPublicationData(document).tome).toBe('22');
-    expect(issue.getPublicationData(document).issue).toBe('11');
-    expect(issue.getPublicationData(document).month).toBe('ноябрь');
-    expect(issue.getPublicationData(document).year).toBe('2019');
+    const pubData = issue.getPublicationData(document);
+    expect(pubData).toMatchObject({
+      volume: '22',
+      issue: '11',
+      month: 'ноябрь',
+      pubDate: '12.11.2019',
+      releaseDate: '15.11.2019',
+      year: '2019',
+    });
   });
   it('getPublicationData(re-2016-01) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('re-2016-01');
-    expect(issue.getPublicationData(document).tome).toBe('14');
-    expect(issue.getPublicationData(document).issue).toBe('1');
-    expect(issue.getPublicationData(document).month).toBe('январь');
-    expect(issue.getPublicationData(document).year).toBe('2016');
+    const pubData = issue.getPublicationData(document);
+    expect(pubData).toMatchObject({
+      volume: '14',
+      issue: '1',
+      month: 'январь',
+      pubDate: '22.12.2015',
+      releaseDate: '26.01.2016',
+      year: '2016',
+    });
   });
   it('getPublicationData(null) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('null');
-    expect(issue.getPublicationData(document)).toBeNull();
+    expect(() => {
+      issue.getPubDates(document);
+    }).toThrow('Данные о датах публикации не найдены!');
   });
 });
 
@@ -177,6 +219,90 @@ describe('getThroughIssueNumberOfIssue() Testing', () => {
   it('getThroughIssueNumberOfIssue(null) Testing', () => {
     expect.hasAssertions();
     const document = utils.getMockDocument('null');
-    expect(issue.getThroughIssueNumberOfIssue(document)).toBeNull();
+    expect(() => {
+      issue.getPubDates(document);
+    }).toThrow('Данные о датах публикации не найдены!');
+  });
+});
+
+describe('getIssueMonthEn() Testing', () => {
+  it('getIssueMonthEn(df-2018-02) Testing', () => {
+    expect.hasAssertions();
+    const document = utils.getMockDocument('df-2018-02');
+    const pubData = issue.getPublicationData(document);
+    expect(issue.getIssueMonthEn(pubData)).toBe('april-june');
+  });
+  it('getIssueMonthEn(fa-2018-04) Testing', () => {
+    expect.hasAssertions();
+    const document = utils.getMockDocument('fa-2018-04');
+    const pubData = issue.getPublicationData(document);
+    expect(issue.getIssueMonthEn(pubData)).toBe('october-december');
+  });
+  it('getIssueMonthEn(fc-2023-01) Testing', () => {
+    expect.hasAssertions();
+    const document = utils.getMockDocument('fc-2023-01');
+    const pubData = issue.getPublicationData(document);
+    expect(issue.getIssueMonthEn(pubData)).toBe('january');
+  });
+  it('getIssueMonthEn(null) Testing', () => {
+    expect.hasAssertions();
+    const document = utils.getMockDocument('null');
+    expect(() => {
+      issue.getPubDates(document);
+    }).toThrow('Данные о датах публикации не найдены!');
+  });
+});
+
+describe('getIssueInfo() Testing', () => {
+  it('getIssueInfo(re-2016-01) Testing', () => {
+    expect.hasAssertions();
+    const document = utils.getMockDocument('re-2016-01');
+    const issueInfo = issue.getIssueInfo(document);
+    expect(issueInfo).toMatchObject({
+      journalNameRu: 'Региональная экономика: теория и практика',
+      journalNameEn: 'Regional Economics: Theory and Practice',
+      volume: '14',
+      issue: '1',
+      throughIssueNumber: '424',
+      monthRu: 'январь',
+      monthEn: 'january',
+      year: '2016',
+      pubDate: '22.12.2015',
+      releaseDate: '26.01.2016',
+    });
+  });
+  it('getIssueInfo(fa-2018-04) Testing', () => {
+    expect.hasAssertions();
+    const document = utils.getMockDocument('fa-2018-04');
+    const issueInfo = issue.getIssueInfo(document);
+    expect(issueInfo).toMatchObject({
+      journalNameRu: 'Финансовая аналитика: проблемы и решения',
+      journalNameEn: 'Financial Analytics: Science and Experience',
+      volume: '11',
+      issue: '4',
+      throughIssueNumber: '346',
+      monthRu: 'октябрь-декабрь',
+      monthEn: 'october-december',
+      year: '2018',
+      pubDate: '23.11.2018',
+      releaseDate: '29.11.2018',
+    });
+  });
+  it('getIssueInfo(fc-2023-01) Testing', () => {
+    expect.hasAssertions();
+    const document = utils.getMockDocument('fc-2023-01');
+    const issueInfo = issue.getIssueInfo(document);
+    expect(issueInfo).toMatchObject({
+      journalNameRu: 'Финансы и кредит',
+      journalNameEn: 'Finance and Credit',
+      volume: '29',
+      issue: '1',
+      throughIssueNumber: '829',
+      monthRu: 'январь',
+      monthEn: 'january',
+      year: '2023',
+      pubDate: '24.01.2023',
+      releaseDate: '30.01.2023',
+    });
   });
 });
