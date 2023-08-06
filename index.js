@@ -1,11 +1,11 @@
 'use strict';
 
-const issue = require('./lib/issue.js');
+// const issue = require('./lib/issue.js');
 const utils = require('./lib/utils.js');
-const { DOMParser } = require('@xmldom/xmldom');
+const contents = require('./lib/contents.js');
 
-let document = utils.getMockDocument('fc-2023-01');
+let document = utils.getMockDocument('df-2018-02');
 
-const issueData = issue.getIssueInfo(document);
+const tableEl = contents.getContentsHeaderElementRu(document);
 
-console.log(issueData);
+console.log(tableEl);
